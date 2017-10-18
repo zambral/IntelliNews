@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- a to hex -> http://stackoverflow.com/questions/15852122/hex-transparency-in-colors -->
+
+    <color name="colorPrimary">#0F6EAE</color>
+    <color name="transludent_colorPrimary">#480F6EAE</color>
+    <color name="colorPrimaryDark">#005595</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transludent_white">#48FFFFFF</color>
+</resources>

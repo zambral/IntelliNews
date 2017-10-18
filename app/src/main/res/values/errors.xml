@@ -1,0 +1,8 @@
+<resources>
+    <string name="error_not_an_email">Wrong email format</string>
+    <string name="error_wrong_password">Wrong password format</string>
+    <string name="error_no_account">No account found or wrong credentials</string>
+
+    <string name="error_generic">Unknow error occured. Please retry later!</string>
+    <string name="error_no_network">Network error, please connect you device to wifi or mobile network</string>
+</resources>

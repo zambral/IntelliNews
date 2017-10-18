@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        buildConfigField "String", "NY_TIMES_SEARCH_API_KEY", "\"\""
+        buildConfigField "String", "NY_TIMES_SEARCH_API_BASE_URL", "\"https://api.nytimes.com/\""
+
+        buildConfigField "String", "GUARDIAN_SEARCH_API_KEY", "\"\""
+        buildConfigField "String", "GUARDIAN_SEARCH_API_BASE_URL", "\"https://content.guardianapis.com/\""
+        buildConfigField "String", "WIKIPEDIA_API_BASE_URL", "\"https://en.wikipedia.org/\""
+
+        applicationId "news.intelli.intellinews"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+
+        debug {
+            buildConfigField "String", "EMAIL", "\"mew2@hotmail.fr\""
+            buildConfigField "String", "PASSWORD", "\"toto\""
+            //applicationIdSuffix ".debug"
+        }
+
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+
+    // RXJAVA + RXANDROID
+    compile 'io.reactivex:rxjava:1.1.8'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //GLIDE
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    //annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    compile 'frankiesardo:icepick:3.2.0'
+    provided 'frankiesardo:icepick-processor:3.2.0'
+
+    compile 'com.google.code.gson:gson:2.6.2'
+
+    compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
+
+    compile 'com.jakewharton.timber:timber:4.3.1'
+    compile 'com.google.firebase:firebase-appindexing:10.2.1'
+    compile 'com.google.firebase:firebase-auth:10.2.1'
+
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">IntelliNews</string>
+
+    <string-array name="login_or_register">
+        <item>Login</item>
+        <item>Register</item>
+    </string-array>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="welcome"> Welcome %s !</string>
+    <string name="reload">Réessayer</string>
+</resources>

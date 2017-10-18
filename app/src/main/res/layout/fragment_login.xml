@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@android:color/white"
+    android:focusableInTouchMode="true">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fragment_login_login_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nextFocusDown="@+id/fragment_login_password_input_layout">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/fragment_login_edittext"
+            style="@style/TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            tools:text="zambral"
+            android:inputType="textEmailAddress"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/fragment_login_password_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/fragment_password_edittext"
+            style="@style/TextInput"
+            tools:text="Lorem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/fragment_login_validate_button"
+        style="@style/Button.AppTheme"
+        android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Validate"/>
+
+</LinearLayout>

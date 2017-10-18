@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="104dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp">
+
+    <news.intelli.intellinews.widget.SquareImageView
+        android:id="@+id/cell_news_imageview"
+        app:reference_size="height"
+        android:layout_width="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent"
+        android:src="@mipmap/news" />
+
+    <TextView
+        android:id="@+id/cell_news_title_textview"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toRightOf="@id/cell_news_imageview"
+        android:layout_toEndOf="@id/cell_news_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        tools:text="Lorem ipsum"
+        android:ellipsize="end"
+        android:maxLines="2" />
+
+    <TextView
+        android:layout_alignLeft="@id/cell_news_title_textview"
+        android:layout_alignRight="@id/cell_news_title_textview"
+        android:id="@+id/cell_news_desc_texview"
+        android:layout_below="@id/cell_news_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="italic"
+        android:ellipsize="end"
+        android:textSize="12sp"
+        tools:text="Lorem ipsum"
+        android:maxLines="2" />
+
+</RelativeLayout>

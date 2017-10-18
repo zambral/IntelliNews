@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/fragment_register_pseudo_editText"
+            android:hint="Pseudo"
+            style="@style/TextInput"
+            android:nextFocusDown="@+id/fragment_register_email_editText"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/fragment_register_email_editText"
+            android:layout_marginTop="8dp"
+            android:hint="Email"
+            android:nextFocusDown="@+id/fragment_register_password_editText"
+            style="@style/TextInput"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/fragment_register_password_editText"
+            android:layout_marginTop="8dp"
+            android:hint="Password"
+            style="@style/TextInput"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:layout_marginTop="48dp"
+            style="@style/Button.AppTheme"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign in"/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
